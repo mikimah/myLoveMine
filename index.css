@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: white;
+    
+}
+.moonBox{
+    position: absolute;
+    top:10%;
+    width: 5em;
+    height: 5em;
+    left: 50%;
+    transform:translateX(-50%);
+    z-index: 3;
+}
+.moonBox:hover{
+    cursor: pointer;
+}
+.theMoon{
+    border-radius: 100%;
+    position: absolute;
+    top:15%;
+    left: 50%;
+    transform:translateX(-50%);
+    background-image: url(asset/2415349_forecast_moon_weather_icon.png);
+    height: 5em;
+    width: 5em;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3),0px -10px 30px rgba(255, 255, 255, 0.3);
+    
+}
+.clouds{
+    position: absolute;
+    transform:translateX(-50%);
+    background-image: url(asset/285632_cloud_icon.png);
+    height: 5em;
+    width: 5em;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    transition: 1.5s;
+}
+.c1{
+    left: 80%;
+    top: 10%;
+}
+.c2{
+    top:40%;
+    left: 20%;
+}
+.starBox{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 35vh;
+    z-index: 2;
+}
+.star{
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    background-image: url(asset/star1.png);
+    background-position: center;
+    background-size: cover;
+    filter:invert();
+    
+}
+.theSky{
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+    border: 1px solid;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(to bottom,rgb(36, 67, 94) 5%,rgb(7, 7, 22) 90%) ;
+}
+
+
+@keyframes sparkle{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.textBox{
+    z-index: 3;
+    position: absolute;
+    top: 55%;
+    height: 30vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: Caveat;
+    src: url(asset/Caveat/Caveat-VariableFont_wght.ttf);
+}
+.textBox pre{
+    top: -10%;
+    position: absolute;
+    color: white;
+    font-size: 4em;
+    font-family:Caveat;
+    opacity: 0;
+    transition: .25s;
+}
+@media (max-width:600px) {
+    .textBox{
+        top:65%;
+    }
+    .textBox pre{
+        font-size: 2.3em;
+    }
+    .starBox{
+        height: 40vh;
+    }
+}
+
+
+.poorPerson{
+    z-index: 0;
+    display: flex;
+    position: absolute;
+    top: 60%;
+    width: 12em;
+    height: 12em;
+    right: 10%;
+}
+.poorPerson span{
+    position: absolute;
+    top:50%;
+    right: 0;
+    width: 6em;
+    height: 6em;
+    background-image: url(asset/poorLilMe.jfif);
+    background-position: center;
+    background-size: cover;
+}
