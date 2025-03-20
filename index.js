@@ -17,9 +17,9 @@ let onGoing = false;
 function changeSky(){
     if(onGoing==false){
         onGoing = true;
-        document.querySelector(".c1").style.left = "40vw";
+        document.querySelector(".c1").style.left = "30vw";
         document.querySelector(".c1").style.opacity = "0";
-        document.querySelector(".c2").style.left="-30vw";
+        document.querySelector(".c2").style.left="-20vw";
         document.querySelector(".c2").style.opacity = "0";
         document.querySelector(".theSky").style.opacity="1";
         addStars();
